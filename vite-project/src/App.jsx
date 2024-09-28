@@ -1,7 +1,8 @@
 import { restaurants } from "./mock";
 import { Restaurant } from "./components/restaurants";
-import { Tabs } from "./components/Tabs"
+import { Tabs } from "./components/Tabs";
 import { useState } from "react";
+import { Layout } from "./components/Layout";
 
 const App = () => {
   const activeId = restaurants[0].id;
@@ -13,16 +14,18 @@ const App = () => {
     setActiveRestaurant(id);
   };
   return (
-    <div>
-      <div role="tablist">
-        <Tabs items={restaurants} onChange={changeRestaurant}></Tabs>
-        <Restaurant
-          name={activeRestaurant.name}
-          dishes={activeRestaurant.menu}
-          reviews={activeRestaurant.reviews}
-        ></Restaurant>
+    <Layout>
+      <div>
+        <div role="tablist">
+          <Tabs items={restaurants} onChange={changeRestaurant}></Tabs>
+          <Restaurant
+            name={activeRestaurant.name}
+            dishes={activeRestaurant.menu}
+            reviews={activeRestaurant.reviews}
+          ></Restaurant>
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 export default App;
