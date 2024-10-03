@@ -1,0 +1,14 @@
+.tab {
+    font-weight: bold;
+    background-color:beige;
+    border: none;
+    width: 250px; /* Ширина кнопки */
+    height: 60px;
+    font-size: 25px;
+    font-family: "PT Sans", "Arial", sans-serif;
+ }
+ .container{ 
+    display: table;
+    margin-bottom: 40px;
+    text-align: center; 
+}

@@ -1,6 +1,7 @@
+import "./Tab.css"
 export const Tab = ({ id, onClick, name, key }) => {
   return (
-    <button id={id} onClick={onClick} key={key}>
+    <button className={'tab'}id={id} onClick={onClick} key={key}>
       {name}
     </button>
   );
