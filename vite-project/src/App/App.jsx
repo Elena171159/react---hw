@@ -2,14 +2,12 @@ import { restaurants } from "../mock";
 import { Restaurant } from "../components/Restaurant/Restaurants";
 import { Tabs } from "../components/tabs/Tabs";
 import { useState } from "react";
-import { Layout } from "../components/Layout";
+import { Layout } from "../components/Layout/Layout";
 import { FormReview } from "../components/review/ ReviewForm";
-import { ProgressBar } from "../components/ProgressBar";
 import "./App.css";
 
 const App = () => {
-  const activeId = restaurants[0].id;
-  const [activeRestarauntId, setActiveRestaurant] = useState(activeId);
+  const [activeRestarauntId, setActiveRestaurant] = useState(restaurants[0].id);
   const activeRestaurant = restaurants.find(
     (element) => element.id === activeRestarauntId
   );
@@ -18,18 +16,15 @@ const App = () => {
   };
   return (
     <>
-      <ProgressBar></ProgressBar>
       <Layout>
-        <div>
-          <div role="tablist">
-            <Tabs items={restaurants} onChange={changeRestaurant}></Tabs>
-            <Restaurant
-              name={activeRestaurant.name}
-              dishes={activeRestaurant.menu}
-              reviews={activeRestaurant.reviews}
-            ></Restaurant>
-            <FormReview></FormReview>
-          </div>
+        <div role="tablist">
+          <Tabs items={restaurants} onChange={changeRestaurant}></Tabs>
+          <Restaurant
+            name={activeRestaurant.name}
+            dishes={activeRestaurant.menu}
+            reviews={activeRestaurant.reviews}
+          ></Restaurant>
+          <FormReview></FormReview>
         </div>
       </Layout>
     </>

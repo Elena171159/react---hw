@@ -7,14 +7,13 @@ export const Menu = ({ dishes }) => {
   return (
     <div>
       {dishes.map((dish) => (
-        <div key={dish.id + "."}>
+        <div key={dish.id}>
           <Dish
-            key={dish.id}
             name={dish.name}
             ingredients={dish.ingredients}
             price={dish.price}
           ></Dish>
-          <DishCounter key={dish.id + "/"}></DishCounter>
+          <DishCounter />
         </div>
       ))}
     </div>

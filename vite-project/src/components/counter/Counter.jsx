@@ -1,11 +1,11 @@
-export const Counter = ({ getAdd, counter, getDelete }) => {
+export const Counter = ({ value, increase, decrease }) => {
   return (
     <>
-      <button style={{ color: "red", margin: "10px" }} onClick={getAdd}>
+      <button style={{ color: "red", margin: "10px" }} onClick={increase}>
         +
       </button>
-      {counter}
-      <button style={{ color: "blue", margin: "10px" }} onClick={getDelete}>
+      {value}
+      <button style={{ color: "blue", margin: "10px" }} onClick={decrease}>
         -
       </button>
     </>
