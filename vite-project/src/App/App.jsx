@@ -15,19 +15,17 @@ const App = () => {
     setActiveRestaurant(id);
   };
   return (
-    <>
-      <Layout>
-        <div role="tablist">
-          <Tabs items={restaurants} onChange={changeRestaurant}></Tabs>
-          <Restaurant
-            name={activeRestaurant.name}
-            dishes={activeRestaurant.menu}
-            reviews={activeRestaurant.reviews}
-          ></Restaurant>
-          <FormReview></FormReview>
-        </div>
-      </Layout>
-    </>
+    <Layout>
+      <div role="tablist">
+        <Tabs items={restaurants} onChange={changeRestaurant}></Tabs>
+        <Restaurant
+          name={activeRestaurant.name}
+          dishes={activeRestaurant.menu}
+          reviews={activeRestaurant.reviews}
+        ></Restaurant>
+        <FormReview></FormReview>
+      </div>
+    </Layout>
   );
 };
 export default App;

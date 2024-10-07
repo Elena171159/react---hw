@@ -12,7 +12,7 @@ export const Menu = ({ dishes }) => {
             name={dish.name}
             ingredients={dish.ingredients}
             price={dish.price}
-          ></Dish>
+          />
           <DishCounter />
         </div>
       ))}

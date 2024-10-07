@@ -14,6 +14,5 @@ export const DishCounter = () => {
     }
     setCounter((count) => --count);
   };
-  // eslint-disable-next-line react/react-in-jsx-scope
   return <Counter increase={add} value={counter} decrease={deleTe}></Counter>;
 };

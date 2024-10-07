@@ -17,11 +17,11 @@ export const ProgressBar = () => {
     <div
       style={{
         backgroundColor: "yellow",
-        position:"fixed",
+        position: "fixed",
         height: "15px",
-        top:"0",
+        top: "0",
         width: `${currentPercent}%`,
       }}
-    ></div>
+    />
   );
 };
