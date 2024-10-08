@@ -1,4 +1,5 @@
 import { Tab } from "./Tab";
+import React from "react";
 import "./Tab.css"
 export function Tabs({ items, onChange }) {
   return (

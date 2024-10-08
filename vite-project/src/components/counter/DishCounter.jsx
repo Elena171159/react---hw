@@ -1,5 +1,6 @@
 import { Counter } from "./Counter";
-import { useState } from "react";
+import { useState, React } from "react";
+
 export const DishCounter = () => {
   const [counter, setCounter] = useState(0);
   const add = () => {
@@ -14,5 +15,5 @@ export const DishCounter = () => {
     }
     setCounter((count) => --count);
   };
-  return <Counter increase={add} value={counter} decrease={deleTe}></Counter>;
+  return <Counter increase={add} value={counter} decrease={deleTe} />;
 };

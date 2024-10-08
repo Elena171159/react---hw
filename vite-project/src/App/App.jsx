@@ -1,4 +1,5 @@
 import { restaurants } from "../mock";
+import React from "react";
 import { Restaurant } from "../components/Restaurant/Restaurants";
 import { Tabs } from "../components/tabs/Tabs";
 import { useState } from "react";
@@ -17,13 +18,13 @@ const App = () => {
   return (
     <Layout>
       <div role="tablist">
-        <Tabs items={restaurants} onChange={changeRestaurant}></Tabs>
+        <Tabs items={restaurants} onChange={changeRestaurant} />
         <Restaurant
           name={activeRestaurant.name}
           dishes={activeRestaurant.menu}
           reviews={activeRestaurant.reviews}
-        ></Restaurant>
-        <FormReview></FormReview>
+        />
+        <FormReview />
       </div>
     </Layout>
   );

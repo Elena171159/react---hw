@@ -1,3 +1,4 @@
+import React from "react";
 export const Counter = ({ value, increase, decrease }) => {
   return (
     <>

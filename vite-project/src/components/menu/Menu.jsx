@@ -1,3 +1,4 @@
+import React from "react";
 import { Dish } from "./dish";
 import { DishCounter } from "../counter/DishCounter";
 export const Menu = ({ dishes }) => {

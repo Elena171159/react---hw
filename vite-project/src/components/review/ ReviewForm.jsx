@@ -1,9 +1,18 @@
 import { Counter } from "../counter/Counter";
 import { useForm } from "./use-form";
+import React from "react";
 
 export const FormReview = () => {
-  
-  const { name, text, rating, setClearForm, setDecrease, setIncrease, setReview, setName } = useForm();
+  const {
+    name,
+    text,
+    rating,
+    setClearForm,
+    setDecrease,
+    setIncrease,
+    setReview,
+    setName,
+  } = useForm();
   return (
     <div>
       <form onSubmit={(e) => e.preventDefault()}>
@@ -12,9 +21,7 @@ export const FormReview = () => {
           <input
             style={{ margin: "15px" }}
             id="name"
-            onChange={(e) =>
-              setName(e.target.value)
-            }
+            onChange={(e) => setName(e.target.value)}
             value={name}
           />
         </label>
@@ -23,9 +30,7 @@ export const FormReview = () => {
             placeholder="your comment"
             style={{ display: "flex" }}
             id="text"
-            onChange={(e) =>
-              setReview(e.target.value)
-            }
+            onChange={(e) => setReview(e.target.value)}
             value={text}
           />
         </label>
@@ -34,7 +39,7 @@ export const FormReview = () => {
           value={rating}
           increase={() => setIncrease()}
           decrease={() => setDecrease()}
-        ></Counter>
+        />
         <button onClick={() => setClearForm()}>Clear</button>
       </form>
     </div>
