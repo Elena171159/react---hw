@@ -1,8 +1,8 @@
-import "./Dish.css";
 import React from "react";
+import styles from "./menu.module.css";
 export const Dish = ({ name, ingredients, price, key }) => {
   return (
-    <div className="card" key={key}>
+    <div className={styles.card} key={key}>
       <h2>
         {name} - {price}$
       </h2>

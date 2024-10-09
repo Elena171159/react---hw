@@ -5,7 +5,7 @@ import { Tabs } from "../components/tabs/Tabs";
 import { useState } from "react";
 import { Layout } from "../components/Layout/Layout";
 import { FormReview } from "../components/review/ ReviewForm";
-import "./App.css";
+import styles from "./app.module.css";
 
 const App = () => {
   const [activeRestarauntId, setActiveRestaurant] = useState(restaurants[0].id);
@@ -17,7 +17,7 @@ const App = () => {
   };
   return (
     <Layout>
-      <div role="tablist">
+      <div className={styles.root}>
         <Tabs items={restaurants} onChange={changeRestaurant} />
         <Restaurant
           name={activeRestaurant.name}

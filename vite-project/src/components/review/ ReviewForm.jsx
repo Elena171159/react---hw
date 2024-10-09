@@ -1,5 +1,6 @@
 import { Counter } from "../counter/Counter";
 import { useForm } from "./use-form";
+import styles from "./review.module.css";
 import React from "react";
 
 export const FormReview = () => {
@@ -14,34 +15,36 @@ export const FormReview = () => {
     setName,
   } = useForm();
   return (
-    <div>
-      <form onSubmit={(e) => e.preventDefault()}>
-        <label>
-          Name
+    <div  className={styles.row}>
+      <form className={styles.reviewform} onSubmit={(e) => e.preventDefault()}>
+        <label htmlFor="name" className={styles.label}>
+          <span className={styles.span}>Name</span>
           <input
-            style={{ margin: "15px" }}
+            className={styles.input}
             id="name"
             onChange={(e) => setName(e.target.value)}
             value={name}
           />
         </label>
-        <label>
+        <label htmlFor="text" className={styles.label}>
           <textarea
+            className={styles.textarea}
             placeholder="your comment"
-            style={{ display: "flex" }}
             id="text"
             onChange={(e) => setReview(e.target.value)}
             value={text}
           />
         </label>
-        <span>Rating</span>
+        <span className={styles.span}>Rating</span>
         <Counter
           value={rating}
           increase={() => setIncrease()}
           decrease={() => setDecrease()}
         />
-        <button onClick={() => setClearForm()}>Clear</button>
+        <button className={styles.submit} onClick={() => setClearForm()}>
+        <span className={styles.span}>Clear</span>
+        </button>
       </form>
-    </div>
+      </div>
   );
 };

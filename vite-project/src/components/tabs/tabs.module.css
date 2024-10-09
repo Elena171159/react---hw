@@ -1,4 +1,10 @@
-.tab {
+.container{ 
+    display: table;
+    margin-bottom: 40px;
+    text-align: center; 
+}
+
+ .tab {
     font-weight: bold;
     background-color:beige;
     border: none;
@@ -7,8 +13,3 @@
     font-size: 25px;
     font-family: "PT Sans", "Arial", sans-serif;
  }
- .container{ 
-    display: table;
-    margin-bottom: 40px;
-    text-align: center; 
-}

@@ -1,9 +1,10 @@
 import { Tab } from "./Tab";
 import React from "react";
-import "./Tab.css"
+import styles from "./tabs.module.css";
+
 export function Tabs({ items, onChange }) {
   return (
-    <div className="container">
+    <div className={styles.container}>
       {items.map((tab) => (
         <Tab key={tab.id} name={tab.name} onClick={() => onChange(tab.id)} />
       ))}
