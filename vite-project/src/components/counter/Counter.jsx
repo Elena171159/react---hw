@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./counter.module.css";
 export const Counter = ({ value, increase, decrease }) => {
   return (

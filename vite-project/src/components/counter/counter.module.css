@@ -1,13 +1,14 @@
 .counterContainer {
   display:inline;
   padding: 2px;
-  font-weight: 700;
+  font-weight: 600;
   max-width: 80px;
 }
 
 .count {
   text-align: center;
-  color:black
+  color:black;
+  font-size: large;
 }
 
 .counterButton {
