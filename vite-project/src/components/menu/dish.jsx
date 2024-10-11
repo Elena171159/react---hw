@@ -1,5 +1,4 @@
 import "./Dish.css";
-import React from "react";
 export const Dish = ({ name, ingredients, price, key }) => {
   return (
     <div className="card" key={key}>

@@ -1,4 +1,4 @@
-import { useEffect, useState, React } from "react";
+import { useEffect, useState } from "react";
 
 export const ProgressBar = () => {
   const [currentPercent, setCurrentPercent] = useState(0);

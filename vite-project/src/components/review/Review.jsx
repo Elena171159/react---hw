@@ -1,4 +1,3 @@
-import React from "react";
 export const Reviews = ({ reviews }) => {
   if (reviews.length <= 0) {
     return <h2>No reviews</h2>;

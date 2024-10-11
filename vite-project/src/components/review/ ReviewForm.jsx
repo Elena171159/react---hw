@@ -1,6 +1,5 @@
 import { Counter } from "../counter/Counter";
 import { useForm } from "./use-form";
-import React from "react";
 
 export const FormReview = () => {
   const {
