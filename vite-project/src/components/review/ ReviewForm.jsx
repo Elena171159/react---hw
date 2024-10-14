@@ -1,9 +1,12 @@
 import { Counter } from "../counter/Counter";
 import { useForm } from "./use-form";
+import classnames from "classnames";
+import { useTheme } from "../use-themes-context/use-theme";
 import styles from "./review.module.css";
 import React from "react";
 
 export const FormReview = () => {
+  const { theme } = useTheme();
   const {
     name,
     text,
@@ -15,7 +18,7 @@ export const FormReview = () => {
     setName,
   } = useForm();
   return (
-    <div  className={styles.row}>
+    <div className={styles.row}>
       <form className={styles.reviewform} onSubmit={(e) => e.preventDefault()}>
         <label htmlFor="name" className={styles.label}>
           <span className={styles.span}>Name</span>
@@ -41,10 +44,16 @@ export const FormReview = () => {
           increase={() => setIncrease()}
           decrease={() => setDecrease()}
         />
-        <button className={styles.submit} onClick={() => setClearForm()}>
-        <span className={styles.span}>Clear</span>
+        <button
+          className={classnames(styles.submit, {
+            [styles.light]: theme === "light",
+            [styles.dark]: theme === "dark",
+          })}
+          onClick={() => setClearForm()}
+        >
+          <span className={styles.span}>Clear</span>
         </button>
       </form>
-      </div>
+    </div>
   );
 };
