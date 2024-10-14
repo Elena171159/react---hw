@@ -1,5 +1,5 @@
 .counterContainer {
-  display:inline;
+  display: inline;
   padding: 2px;
   font-weight: 600;
   max-width: 80px;
@@ -7,7 +7,7 @@
 
 .count {
   text-align: center;
-  color:black;
+  color: black;
   font-size: large;
 }
 
@@ -18,4 +18,13 @@
   width: 36px;
   height: 36px;
   margin: 2px;
+}
+.light {
+  color: rgb(5, 46, 92);
+  background-color: white;
+}
+
+.dark {
+  color: white;
+  background-color: rgb(5, 46, 92);
 }

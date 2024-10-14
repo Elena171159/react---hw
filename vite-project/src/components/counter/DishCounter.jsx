@@ -1,7 +1,12 @@
 import { Counter } from "./Counter";
 import { useState, React } from "react";
+import { useUserTheme } from "../use-theme-context-user/useuser";
 
 export const DishCounter = () => {
+  const { user } = useUserTheme();
+  if (user === "") {
+    return null;
+  }
   const [counter, setCounter] = useState(0);
   const add = () => {
     if (counter > 5) {

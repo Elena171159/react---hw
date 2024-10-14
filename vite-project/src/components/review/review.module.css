@@ -40,7 +40,16 @@
 }
 .submit {
   display: flex;
-  margin:20px;
+  margin: 20px;
   background-color: var(--blue);
   color: var(--white);
+}
+.light {
+  color: rgb(5, 46, 92);
+  background-color: white;
+}
+
+.dark {
+  color: white;
+  background-color: rgb(5, 46, 92);
 }

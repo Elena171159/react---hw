@@ -1,15 +1,24 @@
-.container{ 
-    display: table;
-    margin-bottom: 40px;
-    text-align: center; 
+.container {
+  display: table;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
- .tab {
-    font-weight: bold;
-    background-color:beige;
-    border: none;
-    width: 250px; /* Ширина кнопки */
-    height: 60px;
-    font-size: 25px;
-    font-family: "PT Sans", "Arial", sans-serif;
- }
+.tab {
+  font-weight: bold;
+  background-color: beige;
+  border: none;
+  width: 250px; /* Ширина кнопки */
+  height: 60px;
+  font-size: 25px;
+  font-family: "PT Sans", "Arial", sans-serif;
+}
+.light {
+  color: rgb(5, 46, 92);
+  background-color: white;
+}
+
+.dark {
+  color: white;
+  background-color: rgb(5, 46, 92);
+}
