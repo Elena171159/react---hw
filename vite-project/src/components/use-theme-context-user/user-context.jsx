@@ -1,13 +1,15 @@
 import { AuthContext } from ".";
 import { useState } from "react";
 export const AuthContextProvider = ({ children }) => {
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState(null);
   const authUser = () => {
-    if (user === "") {
-      setUser("lena");
-    } else {
-      setUser("");
-    }
+    setUser((current) => {
+      if (current === null) {
+        return "user";
+      } else {
+        return null;
+      }
+    });
   };
   return (
     <AuthContext.Provider value={{ user, authUser }}>

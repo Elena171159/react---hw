@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./tabs.module.css";
 import classnames from "classnames";
 import { useTheme } from "../use-themes-context/use-theme";
-export const Tab = ({ id, onClick, name, key }) => {
+export const Tab = ({ id, onClick, name }) => {
   const { theme } = useTheme();
   return (
     <button
@@ -12,7 +12,6 @@ export const Tab = ({ id, onClick, name, key }) => {
       })}
       id={id}
       onClick={onClick}
-      key={key}
     >
       {name}
     </button>
