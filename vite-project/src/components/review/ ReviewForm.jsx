@@ -4,9 +4,11 @@ import classnames from "classnames";
 import { useTheme } from "../use-themes-context/use-theme";
 import styles from "./review.module.css";
 import React from "react";
+import { useAuth } from "../use-theme-context-user/useuser";
 
 export const FormReview = () => {
   const { theme } = useTheme();
+  const { user } = useAuth();
   const {
     name,
     text,
@@ -17,7 +19,8 @@ export const FormReview = () => {
     setReview,
     setName,
   } = useForm();
-  return (
+
+  return user ? (
     <div className={styles.row}>
       <form className={styles.reviewform} onSubmit={(e) => e.preventDefault()}>
         <label htmlFor="name" className={styles.label}>
@@ -55,5 +58,5 @@ export const FormReview = () => {
         </button>
       </form>
     </div>
-  );
+  ) : null;
 };
