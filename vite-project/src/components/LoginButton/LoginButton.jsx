@@ -1,5 +1,5 @@
-import { Button } from "../../Button/Button";
-import { useAuth } from "../../use-theme-context-user/useuser";
+import { Button } from "../Button/Button"
+import { useAuth } from "../use-theme-context-user/useuser";
 import styles from "./loginButton.module.css";
 export const LoginButton = () => {
   const { user, authUser } = useAuth();

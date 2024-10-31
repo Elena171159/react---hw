@@ -1,22 +1,14 @@
-import React from "react";
+import { useSelector } from "react-redux";
+import { selectUserById } from "../../../redux/users";
+import { selectReviewById } from "../../../redux/reviews";
 import styles from "./review.module.css";
-export const Reviews = ({ reviews }) => {
-  if (reviews.length <= 0) {
-    return <h2>No reviews</h2>;
-  }
+export const Review = ({ id }) => {
+  const review = useSelector((state) => selectReviewById(state, id));
+  const user = useSelector((state) => selectUserById(state, review.userId));
   return (
-    <div>
-      <h2>Reviews</h2>
-      <ul>
-        {reviews.map(({ user, text, rating, id }) => {
-          return (
-            <li key={id} className={styles.reviewCard}>
-              User: {user} <div>text: {text}</div>
-              <div>star: {rating}</div>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <li className={styles.reviewCard}>
+      User: {user.name} <div>text: {review.text}</div>
+      <div>star: {review.rating}</div>
+    </li>
   );
 };
